@@ -1,5 +1,24 @@
 textarea{
     width: 100%;
+    max-width: 100%;
     min-height: 500px;
+    border: 1px solid #395453;
     overflow: auto;
+}
+#root{
+    padding: 20px;
+    margin: 0px auto;
+}
+#mark-content{
+    height: 500px;
+    max-height: 500px;
+    padding: 20px;
+    border: 1px solid #395453;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+#mark-textarea{
+    height: 500px;
+    max-height: 500px;
 }
