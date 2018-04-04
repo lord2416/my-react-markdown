@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
+import MarkdownTextarea from './MarkdownTextarea';
+import MarkdownHtml from './MarkdownHtml';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import '../style/css/main.css';
-import MarkdownTextarea from './MarkdownTextarea';
-import MarkdownHtml from './MarkdownHtml';
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      initialHtml: '<p>123</p>'
+      initialHtml: ''
     };
   }
   render() {

@@ -8,7 +8,9 @@ class MarkdownTextarea extends Component {
 
     render() {
         return (
-            <textarea {...this.props}/>
+            <div id="mark-textarea">
+                <textarea {...this.props}/>
+            </div>
         )
     }
 }
