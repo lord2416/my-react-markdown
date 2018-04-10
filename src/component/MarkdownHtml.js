@@ -1,33 +1,31 @@
 import React, {Component} from 'react';
-import marked from 'marked';
+// import marked from 'marked';
 class MarkdownHtml extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            html: this.props.html
-        }
     }
     
     render() {
         return (
-            <div id="mark-content" {...this.props}></div>
+            <div id="mark-content" dangerouslySetInnerHTML={{__html: this.props.markHtml}}>
+            </div>
         );
     }
 
-    componentWillReceiveProps(nextProps, nextContext) {
-        console.log('MarkdownHtml', 'nextProps:', nextProps, 'nextContext', nextContext);
-        this.setState({
-            html: nextProps.html
-        });
-    }
+    // componentWillReceiveProps(nextProps, nextContext) {
+    //     console.log('MarkdownHtml', 'nextProps:', nextProps, 'nextContext', nextContext);
+    //     this.setState({
+    //         html: nextProps.html
+    //     });
+    // }
 
-    componentDidMount() {
-        document.getElementById('mark-content').innerHTML = marked(this.state.html);
-    }
+    // componentDidMount() {
+    //     document.getElementById('mark-content').innerHTML = marked(this.state.html);
+    // }
 
-    componentDidUpdate() {
-        document.getElementById('mark-content').innerHTML = marked(this.state.html);
-    }
+    // componentDidUpdate() {
+    //     document.getElementById('mark-content').innerHTML = marked(this.state.html);
+    // }
 }
 
 export default MarkdownHtml;

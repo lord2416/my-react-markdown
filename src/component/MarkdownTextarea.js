@@ -9,7 +9,7 @@ class MarkdownTextarea extends Component {
     render() {
         return (
             <div id="mark-textarea">
-                <textarea {...this.props}/>
+                <textarea onChange={e => this.props.onChange(e.target.value)} html={this.props.markHtml}/>
             </div>
         )
     }
